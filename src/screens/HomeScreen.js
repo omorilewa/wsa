@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
 import { Dimensions, Keyboard } from 'react-native';
-import PropTypes from 'prop-types';
 import { reduxForm, destroy } from 'redux-form';
 import { Home } from '../components';
-import { multiSetItems } from '../util';
+// import { multiSetItems } from '../util';
 const window = Dimensions.get('window');
 
 class HomeScreen extends Component {
   static navigationOptions = {
     header: null,
   };
-
-  static propTypes = {
-    input: PropTypes.object,
-    handleSubmit: PropTypes.func,
-    dispatch: PropTypes.func,
-    authenticateUserMutation: PropTypes.func,
-    navigation: PropTypes.object,
-    addTokenToStore: PropTypes.func,
-  }
 
   state = {
     showLogo: true,
@@ -81,7 +71,7 @@ class HomeScreen extends Component {
     const { login: { token, user: { username, __typename } } } = data;
     this.setState(() => ({ errored: false }));
     const { navigate } = this.props.navigation;
-    await multiSetItems({ token, username, userType: __typename });
+    // await multiSetItems({ token, username, userType: __typename });
     __typename === 'BDCAdmin' ? navigate('CreateUser') : navigate('DrawerStack');
   }
 
