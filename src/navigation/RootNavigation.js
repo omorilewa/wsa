@@ -1,20 +1,21 @@
 import React from 'react';
-import { Easing, TouchableHighlight, Image, View } from 'react-native';
+import { Easing, TouchableHighlight, Image, View, Text } from 'react-native';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 import { NavigationStyles as styles } from "../styles";
 import {
   HomeScreen,
-  NewRateScreen,
-  PrevRateScreen,
-  RateBoundariesScreen,
-  CreateUserScreen,
-  ManageUserScreen,
-  FAQScreen,
-  PostScheduleScreen,
-  UpdateScreen
+  DashboardScreen
+  // NewRateScreen,
+  // PrevRateScreen,
+  // RateBoundariesScreen,
+  // CreateUserScreen,
+  // ManageUserScreen,
+  // FAQScreen,
+  // PostScheduleScreen,
+  // UpdateScreen
 } from '../screens';
-import { StyledText as Text, SideMenu } from '../components';
+import { SideMenu } from '../components';
 
 const drawerButton = navigation =>
   <TouchableHighlight
@@ -31,14 +32,14 @@ const drawerButton = navigation =>
   </TouchableHighlight>;
 
 export const DrawerStack = DrawerNavigator({
-  NewRate: { screen: NewRateScreen },
-  PrevRate: { screen: PrevRateScreen },
-  CreateUser: { screen: CreateUserScreen },
-  ManageUsers: { screen: ManageUserScreen },
-  Configuration: { screen: RateBoundariesScreen },
-  PostSchedule: { screen: PostScheduleScreen },
-  Update: { screen: UpdateScreen },
-  Help: { screen: FAQScreen },
+  NewRate: { screen: DashboardScreen },
+  // PrevRate: { screen: PrevRateScreen },
+  // CreateUser: { screen: CreateUserScreen },
+  // ManageUsers: { screen: ManageUserScreen },
+  // Configuration: { screen: RateBoundariesScreen },
+  // PostSchedule: { screen: PostScheduleScreen },
+  // Update: { screen: UpdateScreen },
+  // Help: { screen: FAQScreen },
 },
   {
     gesturesEnabled: false,
@@ -59,10 +60,10 @@ const DrawerNavigation = StackNavigator({
       },
       headerTitle: (
         <View style={styles.headerTitleStyle}>
-          <Image
+          {/* <Image
             style={styles.imageStyle}
             source={require('../../src/assets/images/logo.png')}
-          />
+          /> */}
           <View style={styles.bdcView}>
             <Text style={styles.text}>BDC FX</Text>
             <Text style={styles.text}>RATE ENGINE</Text>
