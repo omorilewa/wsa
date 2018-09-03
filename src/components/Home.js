@@ -52,13 +52,13 @@ class Home extends PureComponent {
           <Image
             style={styles.image}
             source={require("../assets/images/logo.png")}
-            />
+          />
           <View style={styles.main}>
             {error && <Text style={styles.error}>{errorText}</Text>}
             <Field
               name="usernameOrEmail"
               component={RenderInput}
-              placeholder="Username or Email"
+              placeholder="Username or email"
               username
             />
             <Field
@@ -67,8 +67,26 @@ class Home extends PureComponent {
               placeholder="Password"
               icon-name="icon_password.png"
               secureTextEntry
+              password
             />
+            <TouchableHighlight
+              underlayColor="#00008b"
+              style={styles.buttonBody}>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={styles.buttonText}>LOGIN NOW</Text>
+              </View>
+            </TouchableHighlight>
           </View>
+            <View style={styles.flexBottom}>
+              <Image
+                style={styles.fb}
+                source={require("../assets/images/fb.png")}
+              />
+              <Image
+                style={styles.twitter}
+                source={require("../assets/images/twitter.png")}
+              />
+            </View>
         </View>
       </ImageBackground>
     );
