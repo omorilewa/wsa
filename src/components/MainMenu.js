@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { func, bool, number, string } from "prop-types";
 import { Field } from "redux-form";
-import { HomeScreenStyles as styles } from "../styles";
+import { MainMenuStyles as styles } from "../styles";
 import { RenderInput } from "../components";
 // import Loader from "./Loader";
 
@@ -44,32 +44,49 @@ class MainMenu extends PureComponent {
         source={require("../assets/images/mainMenuBg.png")}
         style={{ width: "100%", height: "100%" }}
       >
-        {/* <View
-          style={{
-            height: visibleHeight
-          }}
-        >
+        <View style={styles.menuHeaderView}>
           <Image
-            style={styles.image}
+            style={styles.menuHeaderImage}
+            source={require("../assets/images/menu.png")}
+          />
+          <Image
+            style={styles.logoHeaderImage}
             source={require("../assets/images/logo.png")}
-            />
-          <View style={styles.main}>
-            {error && <Text style={styles.error}>{errorText}</Text>}
-            <Field
-              name="usernameOrEmail"
-              component={RenderInput}
-              placeholder="Username or Email"
-              username
-            />
-            <Field
-              name="password"
-              component={RenderInput}
-              placeholder="Password"
-              icon-name="icon_password.png"
-              secureTextEntry
-            />
-          </View>
-        </View> */}
+          />
+          <Image
+            style={styles.dumbellHeaderImage}
+            source={require("../assets/images/dumbell.png")}
+          />
+        </View>
+        <View style={styles.boxWrapper}>
+          <Image
+            style={styles.welcomeBox}
+            source={require("../assets/images/welcomeBox.png")}
+          />
+          {/* <Field
+            name="usernameOrEmail"
+            component={RenderInput}
+            placeholder="Username or Email"
+            username
+          />
+          <Field
+            name="password"
+            component={RenderInput}
+            placeholder="Password"
+            icon-name="icon_password.png"
+            secureTextEntry
+          /> */}
+        </View>
+        <View style={styles.subBoxWrapper}>
+          <Image
+            style={styles.subBox}
+            source={require("../assets/images/subBox.png")}
+          />
+          <Image
+            style={styles.subBox}
+            source={require("../assets/images/subBox.png")}
+          />
+        </View>
       </ImageBackground>
     );
   }
