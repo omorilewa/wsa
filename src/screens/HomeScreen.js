@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Dimensions, Keyboard } from 'react-native';
 import { reduxForm, destroy } from 'redux-form';
 import { Home } from '../components';
-// import { multiSetItems } from '../util';
 const window = Dimensions.get('window');
 
 class HomeScreen extends Component {
@@ -68,11 +67,8 @@ class HomeScreen extends Component {
   }
 
   loginUser = async (data) => {
-    const { login: { token, user: { username, __typename } } } = data;
-    this.setState(() => ({ errored: false }));
     const { navigate } = this.props.navigation;
-    // await multiSetItems({ token, username, userType: __typename });
-    __typename === 'BDCAdmin' ? navigate('CreateUser') : navigate('DrawerStack');
+    navigate('MainMenu');
   }
 
   render() {

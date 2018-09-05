@@ -273,27 +273,6 @@ export const SideMenuStyles = StyleSheet.create({
 });
 
 export const MainMenuStyles = StyleSheet.create({
-  menuHeaderView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  menuHeaderImage: {
-    width: 33,
-    height: 24,
-    marginTop: 38,
-    marginLeft: 20
-  },
-  logoHeaderImage: {
-    width: 65,
-    height: 65,
-    marginTop: 10,
-  },
-  dumbellHeaderImage: {
-    width: 33,
-    height: 40,
-    marginTop: 32,
-    marginRight: 20
-  },
   boxWrapper: {
     alignItems: 'center'
   },
@@ -347,4 +326,28 @@ export const MainMenuStyles = StyleSheet.create({
     marginLeft: 20,
     fontWeight: 'bold'
   }
+});
+
+export const ContentWrapperStyles = StyleSheet.create({
+  menuHeaderView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  menuHeaderImage: {
+    width: 33,
+    height: 24,
+    marginTop: 38,
+    marginLeft: 20
+  },
+  logoHeaderImage: {
+    width: 65,
+    height: 65,
+    marginTop: 10,
+  },
+  dumbellHeaderImage: {
+    width: 33,
+    height: 40,
+    marginTop: 32,
+    marginRight: 20
+  },
 });
