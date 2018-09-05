@@ -272,3 +272,79 @@ export const SideMenuStyles = StyleSheet.create({
   },
 });
 
+export const MainMenuStyles = StyleSheet.create({
+  menuHeaderView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  menuHeaderImage: {
+    width: 33,
+    height: 24,
+    marginTop: 38,
+    marginLeft: 20
+  },
+  logoHeaderImage: {
+    width: 65,
+    height: 65,
+    marginTop: 10,
+  },
+  dumbellHeaderImage: {
+    width: 33,
+    height: 40,
+    marginTop: 32,
+    marginRight: 20
+  },
+  boxWrapper: {
+    alignItems: 'center'
+  },
+  welcomeBox: {
+    width: 380,
+    height: 190,
+    marginTop: 5,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subBox: {
+    width: 175,
+    height: 70,
+    marginTop: 35,
+    borderRadius: 40,
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  subBoxWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+  wboxText: {
+    color: 'white',
+    letterSpacing: 6,
+    marginBottom: 10,
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  underline: {
+    backgroundColor: 'white',
+    height: 3,
+    width: '33%',
+  },
+  subBoxCourseIcon: {
+    height: 40,
+    width: 40,
+    marginLeft: 10
+  },
+  subBoxForumIcon: {
+    height: 40,
+    width: 45,
+    marginLeft: 10
+  },
+  subBoxText: {
+    fontSize: 20,
+    color: 'white',
+    marginLeft: 20,
+    fontWeight: 'bold'
+  }
+});

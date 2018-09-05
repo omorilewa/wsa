@@ -5,15 +5,8 @@ import { Icon } from 'native-base';
 import { NavigationStyles as styles } from "../styles";
 import {
   HomeScreen,
-  DashboardScreen
-  // NewRateScreen,
-  // PrevRateScreen,
-  // RateBoundariesScreen,
-  // CreateUserScreen,
-  // ManageUserScreen,
-  // FAQScreen,
-  // PostScheduleScreen,
-  // UpdateScreen
+  DashboardScreen,
+  MainMenuScreen,
 } from '../screens';
 import { SideMenu } from '../components';
 
@@ -32,14 +25,7 @@ const drawerButton = navigation =>
   </TouchableHighlight>;
 
 export const DrawerStack = DrawerNavigator({
-  NewRate: { screen: DashboardScreen },
-  // PrevRate: { screen: PrevRateScreen },
-  // CreateUser: { screen: CreateUserScreen },
-  // ManageUsers: { screen: ManageUserScreen },
-  // Configuration: { screen: RateBoundariesScreen },
-  // PostSchedule: { screen: PostScheduleScreen },
-  // Update: { screen: UpdateScreen },
-  // Help: { screen: FAQScreen },
+  DashBoard: { screen: DashboardScreen },
 },
   {
     gesturesEnabled: false,
@@ -88,6 +74,7 @@ const noTransitionConfig = () => ({
 });
 
 export const PrimaryNavigator = StackNavigator({
+  MainMenu: { screen: MainMenuScreen },
   Main: { screen: HomeScreen },
   DrawerStack: { screen: DrawerNavigation },
 }, {
