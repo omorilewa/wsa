@@ -164,19 +164,19 @@ export const MainMenuStyles = StyleSheet.create({
   },
   welcomeBox: {
     width: 380,
-    height: 200,
+    height: 190,
     marginTop: 5,
-    borderRadius: 15
-
-    // marginLeft: 10,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   subBox: {
-    width: 180,
-    height: 75,
+    width: 175,
+    height: 70,
     marginTop: 35,
-    // marginRight: 25,
-    // marginLeft: 5,
-    borderRadius: 15
+    borderRadius: 40,
+    alignItems: 'center',
+    flexDirection: 'row'
   },
   subBoxWrapper: {
     flexDirection: 'row',
@@ -184,4 +184,32 @@ export const MainMenuStyles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
   },
+  wboxText: {
+    color: 'white',
+    letterSpacing: 6,
+    marginBottom: 10,
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  underline: {
+    backgroundColor: 'white',
+    height: 3,
+    width: '33%',
+  },
+  subBoxCourseIcon: {
+    height: 40,
+    width: 40,
+    marginLeft: 10
+  },
+  subBoxForumIcon: {
+    height: 40,
+    width: 45,
+    marginLeft: 10
+  },
+  subBoxText: {
+    fontSize: 20,
+    color: 'white',
+    marginLeft: 20,
+    fontWeight: 'bold'
+  }
 });

@@ -59,33 +59,37 @@ class MainMenu extends PureComponent {
           />
         </View>
         <View style={styles.boxWrapper}>
-          <Image
+          <ImageBackground
             style={styles.welcomeBox}
             source={require("../assets/images/welcomeBox.png")}
-          />
-          {/* <Field
-            name="usernameOrEmail"
-            component={RenderInput}
-            placeholder="Username or Email"
-            username
-          />
-          <Field
-            name="password"
-            component={RenderInput}
-            placeholder="Password"
-            icon-name="icon_password.png"
-            secureTextEntry
-          /> */}
+          >
+            <Text style={styles.wboxText}>WELCOME TO</Text>
+            <Text style={styles.wboxText}>WALL STREET ACADEMY</Text>
+            <View style={styles.underline}></View>
+          </ImageBackground>
         </View>
         <View style={styles.subBoxWrapper}>
-          <Image
+          <ImageBackground
             style={styles.subBox}
             source={require("../assets/images/subBox.png")}
-          />
-          <Image
+          >
+            <Image
+              style={styles.subBoxCourseIcon}
+              source={require("../assets/images/coursesIcon.png")}
+            />
+            <Text style={styles.subBoxText}>Courses</Text>
+
+          </ImageBackground>
+          <ImageBackground
             style={styles.subBox}
             source={require("../assets/images/subBox.png")}
-          />
+          >
+            <Image
+              style={styles.subBoxForumIcon}
+              source={require("../assets/images/forumIcon.png")}
+            />
+            <Text style={styles.subBoxText}>Forum</Text>
+          </ImageBackground>
         </View>
       </ImageBackground>
     );
