@@ -7,6 +7,7 @@ import { HomeScreenStyles as styles } from "../styles";
 const RenderInput = ({
   placeholder,
   username,
+  password,
   meta: { touched, error },
   secureTextEntry,
   input: { onChange, ...restInput }
@@ -19,14 +20,17 @@ const RenderInput = ({
     }
   >
     {touched && error && <Icon style={styles.searchIcon} name="alert" />}
+    {username && <Image style={styles.imageStyle} source={require("../assets/images/username.png")}/>}
+    {password && <Image style={styles.pwdImage} source={require("../assets/images/password.png")}/>}
     <Input
       style={styles.input}
       onChangeText={onChange}
       secureTextEntry={secureTextEntry}
       {...restInput}
       placeholder={placeholder}
-      placeholderTextColor="#9c9e9f"
+      placeholderTextColor="#00008b"
     />
+
   </Item>
 );
 

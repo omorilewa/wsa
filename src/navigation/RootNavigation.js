@@ -81,6 +81,6 @@ export const PrimaryNavigator = StackNavigator({
     // Default config for all screens
     headerMode: 'none',
     title: 'Main',
-    // initialRouteName: 'MainMenu',
+    initialRouteName: 'Main',
     transitionConfig: noTransitionConfig
   });
