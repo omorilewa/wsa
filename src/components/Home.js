@@ -71,7 +71,9 @@ class Home extends PureComponent {
             />
             <TouchableHighlight
               underlayColor="#00008b"
-              style={styles.buttonBody}>
+              style={styles.buttonBody}
+              onPress={loginUser}
+            >
               <View style={{ flexDirection: 'row' }}>
                 <Text style={styles.buttonText}>LOGIN NOW</Text>
               </View>
