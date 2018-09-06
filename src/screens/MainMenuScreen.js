@@ -12,8 +12,10 @@ class MainMenuScreen extends Component {
   };
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return (
-      <MainMenu />
+      <MainMenu navigate={navigate} />
     );
   }
 }

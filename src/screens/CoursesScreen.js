@@ -14,9 +14,10 @@ class CoursesScreen extends Component {
   };
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <ContentWrapper>
-        <CoursesHeader />
+        <CoursesHeader navigate={navigate} />
         <ScrollView contentContainerStyle={styles.scroll}>
           <CourseItem
             courseTitle="Introduction"
