@@ -351,3 +351,56 @@ export const ContentWrapperStyles = StyleSheet.create({
     marginRight: 20
   },
 });
+
+export const CourseItemStyles = StyleSheet.create({
+  courseWrapper: {
+    alignItems: 'center',
+    marginTop: 20
+  },
+  courseBox: {
+    width: 380,
+    height: 180,
+    marginTop: 5,
+    borderRadius: 20,
+    paddingLeft: 15,
+    paddingTop: 15,
+    flexDirection: 'row',
+  },
+  courseDetailsWrapper: {
+    flexDirection: 'row',
+  },
+  courseTextWrapper: {
+    flexDirection: 'column'
+  },
+  courseIconWrapper: {
+    width: 55,
+    height: 54,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 15
+  },
+  forexIcon: {
+    width: 35,
+    height: 35,
+  },
+  gettingStartedIcon: {
+    width: 35,
+    height: 25,
+  },
+  courseTitleText: {
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 30,
+    marginBottom: 7
+  },
+  lessonCountHolder: {
+    height: 27,
+    width: 90,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lessonCountText: {
+    color: 'white',
+    fontSize: 15
+  }
+});
