@@ -286,17 +286,17 @@ export const MainMenuStyles = StyleSheet.create({
   },
   subBox: {
     width: 175,
-    height: 70,
+    height: 65,
     marginTop: 35,
-    borderRadius: 40,
+    borderRadius: 25,
     alignItems: 'center',
     flexDirection: 'row'
   },
   subBoxWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 8,
+    paddingRight: 3,
   },
   wboxText: {
     color: 'white',
