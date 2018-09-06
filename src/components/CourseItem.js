@@ -6,7 +6,7 @@ import {
   Text,
   Image,
 } from "react-native";
-import { CourseItemStyles as styles } from "../styles";
+import { CourseStyles as styles } from "../styles";
 
 class CourseItem extends PureComponent {
   static propTypes = {
@@ -25,31 +25,29 @@ class CourseItem extends PureComponent {
     const countSuffix = courseCount === 1 ? 'lesson' : 'lessons';
 
     return (
-      <View style={styles.courseWrapper}>
+      <ImageBackground
+        style={styles.courseBox}
+        source={require("../assets/images/courseEllipse.png")}
+      >
         <ImageBackground
-          style={styles.courseBox}
-          source={require("../assets/images/courseEllipse.png")}
-        >
-          <ImageBackground
-            style={styles.courseIconWrapper}
-            source={require("../assets/images/courseIconHolder.png")}
-            >
-            <Image
-              style={courseIconStyle}
-              source={courseIcon}
-              />
-          </ImageBackground>
-          <View style={styles.courseTextWrapper}>
-            <Text style={styles.courseTitleText}>{courseTitle}</Text>
-            <ImageBackground
-              style={styles.lessonCountHolder}
-              source={require("../assets/images/roundedRectangle.png")}
-            >
-              <Text style={styles.lessonCountText}>{`${courseCount} ${countSuffix}`}</Text>
-            </ImageBackground>
-          </View>
+          style={styles.courseIconWrapper}
+          source={require("../assets/images/courseIconHolder.png")}
+          >
+          <Image
+            style={courseIconStyle}
+            source={courseIcon}
+            />
         </ImageBackground>
-      </View>
+        <View style={styles.courseTextWrapper}>
+          <Text style={styles.courseTitleText}>{courseTitle}</Text>
+          <ImageBackground
+            style={styles.lessonCountHolder}
+            source={require("../assets/images/roundedRectangle.png")}
+          >
+            <Text style={styles.lessonCountText}>{`${courseCount} ${countSuffix}`}</Text>
+          </ImageBackground>
+        </View>
+      </ImageBackground>
     );
   }
 }
