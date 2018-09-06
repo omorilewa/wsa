@@ -82,6 +82,13 @@ class CoursesScreen extends Component {
             courseIconStyle={styles.gettingStartedIcon}
           />
 
+          <CourseItem
+            courseTitle={"Margin Trading Crypto"}
+            courseCount={3}
+            courseIcon={require("../assets/images/cryptoIcon.png")}
+            courseIconStyle={styles.cryptoIcon}
+          />
+
         </ScrollView>
       </ContentWrapper>
     );

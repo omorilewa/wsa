@@ -414,6 +414,10 @@ export const CourseStyles = StyleSheet.create({
     height: 30,
     width: 35
   },
+  cryptoIcon: {
+    height: 45,
+    width: 45
+  },
   courseTitleText: {
     fontWeight: 'bold',
     color: 'white',
