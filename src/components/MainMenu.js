@@ -4,36 +4,43 @@ import {
   ImageBackground,
   Text,
   Image,
+  TouchableHighlight,
 } from "react-native";
 import { MainMenuStyles as styles } from "../styles";
 import ContentWrapper from "./ContentWrapper";
 
 class MainMenu extends PureComponent {
+
+  showCourses = () => this.props.navigate('Courses');
+
   render() {
+    const { showCourses } = this;
+
     return (
       <ContentWrapper>
         <View style={styles.boxWrapper}>
-          <ImageBackground
-            style={styles.welcomeBox}
-            source={require("../assets/images/welcomeBox.png")}
-          >
-            <Text style={styles.wboxText}>WELCOME TO</Text>
-            <Text style={styles.wboxText}>WALL STREET ACADEMY</Text>
-            <View style={styles.underline}></View>
-          </ImageBackground>
+            <ImageBackground
+              style={styles.welcomeBox}
+              source={require("../assets/images/welcomeBox.png")}
+            >
+              <Text style={styles.wboxText}>WELCOME TO</Text>
+              <Text style={styles.wboxText}>WALL STREET ACADEMY</Text>
+              <View style={styles.underline}></View>
+            </ImageBackground>
         </View>
         <View style={styles.subBoxWrapper}>
-          <ImageBackground
-            style={styles.subBox}
-            source={require("../assets/images/subBox.png")}
-          >
-            <Image
-              style={styles.subBoxCourseIcon}
-              source={require("../assets/images/coursesIcon.png")}
-            />
-            <Text style={styles.subBoxText}>Courses</Text>
-
-          </ImageBackground>
+          <TouchableHighlight onPress={showCourses}>
+            <ImageBackground
+              style={styles.subBox}
+              source={require("../assets/images/subBox.png")}
+              >
+              <Image
+                style={styles.subBoxCourseIcon}
+                source={require("../assets/images/coursesIcon.png")}
+                />
+              <Text style={styles.subBoxText}>Courses</Text>
+            </ImageBackground>
+          </TouchableHighlight>
           <ImageBackground
             style={styles.subBox}
             source={require("../assets/images/subBox.png")}

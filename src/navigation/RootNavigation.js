@@ -7,6 +7,7 @@ import {
   HomeScreen,
   DashboardScreen,
   MainMenuScreen,
+  CoursesScreen,
 } from '../screens';
 import { SideMenu } from '../components';
 
@@ -77,6 +78,8 @@ export const PrimaryNavigator = StackNavigator({
   MainMenu: { screen: MainMenuScreen },
   Main: { screen: HomeScreen },
   DrawerStack: { screen: DrawerNavigation },
+  Courses: { screen: CoursesScreen },
+
 }, {
     // Default config for all screens
     headerMode: 'none',

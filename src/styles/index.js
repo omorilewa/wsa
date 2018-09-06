@@ -286,17 +286,17 @@ export const MainMenuStyles = StyleSheet.create({
   },
   subBox: {
     width: 175,
-    height: 70,
+    height: 65,
     marginTop: 35,
-    borderRadius: 40,
+    borderRadius: 25,
     alignItems: 'center',
     flexDirection: 'row'
   },
   subBoxWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 8,
+    paddingRight: 3,
   },
   wboxText: {
     color: 'white',
@@ -333,11 +333,19 @@ export const ContentWrapperStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
+  bgStyle: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  container: {
+    paddingLeft: 15,
+    paddingRight: 15
+  },
   menuHeaderImage: {
     width: 33,
     height: 24,
     marginTop: 38,
-    marginLeft: 20
   },
   logoHeaderImage: {
     width: 65,
@@ -348,6 +356,102 @@ export const ContentWrapperStyles = StyleSheet.create({
     width: 33,
     height: 40,
     marginTop: 32,
-    marginRight: 20
   },
+});
+
+export const CourseStyles = StyleSheet.create({
+  courseWrapper: {
+    alignItems: 'center',
+    marginTop: 20
+  },
+  courseBox: {
+    width: '100%',
+    height: 180,
+    marginTop: 20,
+    borderRadius: 25,
+    paddingTop: 15,
+    flexDirection: 'row',
+  },
+  courseDetailsWrapper: {
+    flexDirection: 'row',
+  },
+  courseTextWrapper: {
+    flexDirection: 'column'
+  },
+  courseIconWrapper: {
+    width: 55,
+    height: 54,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 15,
+    marginLeft: 10,
+  },
+  forexIcon: {
+    width: 35,
+    height: 35,
+  },
+  gettingStartedIcon: {
+    width: 35,
+    height: 25,
+  },
+  psychIcon: {
+    width: 35,
+    height: 25,
+  },
+  phaseOneIcon: {
+    height: 40,
+    width: 20
+  },
+  phaseTwoIcon: {
+    height: 40,
+    width: 25
+  },
+  phaseThreeIcon: {
+    height: 35,
+    width: 35
+  },
+  phaseFourIcon: {
+    height: 30,
+    width: 35
+  },
+  cryptoIcon: {
+    height: 45,
+    width: 45
+  },
+  courseTitleText: {
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 25,
+    marginBottom: 7
+  },
+  lessonCountHolder: {
+    height: 27,
+    width: 90,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lessonCountText: {
+    color: 'white',
+    fontSize: 15
+  },
+  iconWithHome: {
+    flexDirection: 'row',
+  },
+  homeNavIcon: {
+    height: 35,
+    width: 13,
+  },
+  homeText: {
+    fontSize: 20,
+    color: '#00008b',
+    marginLeft: 5
+  },
+  courseHeaderText: {
+    fontSize: 40,
+    color: '#00008b',
+    fontWeight: 'bold',
+  },
+  scroll: {
+    paddingBottom: 200
+  }
 });
