@@ -13,8 +13,11 @@ class MainMenu extends PureComponent {
 
   showCourses = () => this.props.navigate('Courses');
 
+  goToLoginScreen = () => this.props.navigate('Main');
+
+
   render() {
-    const { showCourses } = this;
+    const { showCourses, goToLoginScreen } = this;
 
     return (
       <ContentWrapper>
@@ -41,16 +44,18 @@ class MainMenu extends PureComponent {
               <Text style={styles.subBoxText}>Courses</Text>
             </ImageBackground>
           </TouchableHighlight>
-          <ImageBackground
-            style={styles.subBox}
-            source={require("../assets/images/subBox.png")}
-          >
-            <Image
-              style={styles.subBoxForumIcon}
-              source={require("../assets/images/forumIcon.png")}
-            />
-            <Text style={styles.subBoxText}>Forum</Text>
-          </ImageBackground>
+          <TouchableHighlight onPress={goToLoginScreen}>
+            <ImageBackground
+              style={styles.subBox}
+              source={require("../assets/images/subBox.png")}
+            >
+              <Image
+                style={styles.subBoxForumIcon}
+                source={require("../assets/images/forumIcon.png")}
+              />
+              <Text style={styles.subBoxText}>Forum</Text>
+            </ImageBackground>
+          </TouchableHighlight>
         </View>
       </ContentWrapper>
     );
