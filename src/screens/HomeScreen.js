@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Dimensions, Keyboard } from 'react-native';
 import { reduxForm, destroy } from 'redux-form';
 import { Home } from '../components';
+import { ApiService } from '../util';
 const window = Dimensions.get('window');
 
 class HomeScreen extends Component {
@@ -67,8 +68,17 @@ class HomeScreen extends Component {
   }
 
   loginUser = async (data) => {
-    const { navigate } = this.props.navigation;
-    navigate('MainMenu');
+    try {
+      const apiResponse = await ApiService.post('/jwt-auth/v1/token', {
+        username: 'paulloyddesigns@gmail.com',
+        password: 'kc9vG!485R^KF6^MxqTzq0sk'
+      })
+      console.log('=====================>>>>>>', apiResponse)
+      const { navigate } = this.props.navigation;
+      navigate('MainMenu');
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   render() {

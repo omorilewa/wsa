@@ -38,7 +38,8 @@ class Home extends PureComponent {
       showError,
       showLogo,
       visibleHeight,
-    } = this.props
+    } = this.props;
+
     return (
       <ImageBackground
         source={require("../assets/images/bg.png")}
