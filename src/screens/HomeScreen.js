@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Dimensions, Keyboard } from 'react-native';
 import { reduxForm, destroy } from 'redux-form';
 import { Home } from '../components';
-import { ApiService } from '../util';
+import { AuthService } from '../services';
 const window = Dimensions.get('window');
 
 class HomeScreen extends Component {
@@ -67,6 +67,7 @@ class HomeScreen extends Component {
     this.setState(() => ({ errored: false }));
   }
 
+  // Not currently in use
   loginUser = async (data) => {
     try {
       const apiResponse = await ApiService.post('/jwt-auth/v1/token', {
@@ -84,14 +85,40 @@ class HomeScreen extends Component {
   render() {
     const {
       state: { showLogo, visibleHeight, errored, errorText },
-      props: { handleSubmit },
+      props: { handleSubmit, navigation: { navigate } },
       removeErrorText, showError, loginUser,
     } = this;
     return (
       <Home
         error={errored}
         errorText={errorText}
-        handleSubmit={handleSubmit}
+        handleSubmit={handleSubmit(async (values) => {
+          if (Object.keys(values).every(item => !!item)) {
+            let { password, username } = values;
+            password = password.trim();
+            username = username.trim();
+            console.log("===>>>>>>", username, password)
+            try {
+              const response = await AuthService.login({ username, password });
+
+              // Uncomment next line, comment previous line, remove condition above to login without input fields
+              // const response = await AuthService.login({
+              //   username: 'paulloyddesigns@gmail.com',
+              //   password: 'kc9vG!485R^KF6^MxqTzq0sk'
+              // });
+
+              if (response.data.token) {
+                navigate('MainMenu');
+                console.log("===>>>>>>", response)
+              }
+              if (response.problem) {
+                console.log('AN ERROR OCCURED', response)
+              }
+            } catch (err) {
+              console.log(err)
+            }
+          }
+        })}
         loginUser={loginUser}
         removeErrorText={removeErrorText}
         showError={showError}

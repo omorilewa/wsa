@@ -57,9 +57,9 @@ class Home extends PureComponent {
           <View style={styles.main}>
             {error && <Text style={styles.error}>{errorText}</Text>}
             <Field
-              name="usernameOrEmail"
+              name="username"
               component={RenderInput}
-              placeholder="Username or email"
+              placeholder="Username"
               username
             />
             <Field
@@ -73,7 +73,7 @@ class Home extends PureComponent {
             <TouchableHighlight
               underlayColor="#00008b"
               style={styles.buttonBody}
-              onPress={loginUser}
+              onPress={handleSubmit}
             >
               <View style={{ flexDirection: 'row' }}>
                 <Text style={styles.buttonText}>LOGIN NOW</Text>
