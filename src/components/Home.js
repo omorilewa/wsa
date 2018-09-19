@@ -87,7 +87,7 @@ class Home extends PureComponent {
               />
               <Image
                 style={styles.twitter}
-                source={require("../assets/images/twitter.png")}
+                source={require("../assets/images/instagram.png")}
               />
             </View>
         </View>
